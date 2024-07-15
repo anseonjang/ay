@@ -1,0 +1,80 @@
+.nav {position:relative; z-index:99999999999999; width:100%; height:70px; line-height:70px;}
+.nav-list{padding: 0; list-style: none; position:absolute; top:0px; z-index:9999; width:100%; text-align:center; font-size:0; left:50%; transform:translateX(-50%)}
+.nav-list a {display: block; position: relative; zoom: 1; }
+.nav-list > li {display:inline-block; position:relative; width:auto; padding:0 38px;}
+.nav-list > li > a {font-size:18px; color:#222; line-height:70px;}
+.nav-list > li:hover > a {color:#136cb7;}
+
+/*** 2deths ***/
+.nav-list ul {display: none; position: absolute; width: 100%;  top: 100%; left: 0; z-index: 99999;}
+.nav-list > li > ul{box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; padding:30px 0 15px 0px; min-height:200px;}
+.nav-list > li > ul > li > a{line-height:16px; font-size:16px; color:#000; margin:0 0 15px 0; letter-spacing: -1px; word-break: keep-all;}
+.nav-list li ul li a:hover {opacity:0.8;}
+
+#smenu_bar {position:absolute; top:70px; display:none; border-top:1px solid #ddd; width:100%; min-width:1200px; min-height:200px; z-index:9998; background:#f5f5f5;}
+
+/* Mobile Menu Core Style*/
+#mobile_menu{clear:both;}
+.slicknav_menu {display:none; position:absolute; top:23px; width:100%; z-index:2; }
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding:0; cursor: pointer; margin:0 20px 0 0;}
+.slicknav_menu .slicknav_icon {float: left; margin:0;}
+.slicknav_menu .slicknav_no-text {margin: 0 }
+.slicknav_menu .slicknav_icon-bar {display: block; width:35px; height:2px; background-color: #000;}
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top:9px; }
+.slicknav_nav {position: relative; top:22px; color:#fff; margin:0; padding:0; font-size:16px; clear: both; border-top:1px solid #383844; }
+.slicknav_nav, 
+.slicknav_nav ul {list-style: none; overflow:hidden; background:#fff;}
+.slicknav_nav ul,
+.slicknav_nav li { display: block; border-bottom:1px solid #eae9e9; }
+.slicknav_nav li > a{position:relative;}
+.slicknav_nav li ul{border:0; background:#f4f4f4; padding:10px 0;}
+.slicknav_nav li ul li{border-bottom:0;}
+.slicknav_nav ul li a{ color:#888;}
+
+.slicknav_nav > li > ul > li > a,
+.slicknav_nav li ul li a.slicknav_item{font-size:14px; padding:10px 30px; }
+
+.slicknav_nav .slicknav_item { display: block; cursor: pointer; }
+.slicknav_nav .slicknav_item a {padding:0; margin:0;}
+.slicknav_nav a { display: block ; color:#666; padding:15px;}
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {display: block; line-height: 1.188em; float: left;  color: #FFF; font-weight: bold; text-shadow: 0 1px 3px #000; display:none;}
+.slicknav_nav .slicknav_txtnode {margin-left:15px;}
+
+/*더보기 + 버튼*/
+.slicknav_nav .slicknav_arrow {font-size: 0px; position: absolute; right: 0;  top:50%; width:10px;}
+.slicknav_nav .slicknav_collapsed .slicknav_item span.slicknav_arrow::before{position: absolute; content: '+'; font-size: 17px; opacity: 0.6; width: 10px; height: 10px;  line-height: 8px; margin-top:-5px; right:30px;}
+.slicknav_nav .slicknav_open .slicknav_item span.slicknav_arrow::before{position: absolute; content: '-'; font-size: 17px; opacity: 0.6; width: 10px; height: 5px;  line-height: 0; margin-top:-3px; right:29px;}
+
+/*3deths*/
+.slicknav_nav li ul li ul{background:#e4e4e4;}
+.slicknav_nav li ul li ul li a{padding:10px 40px 7px 40px; font-size:13px;}
+
+/*hover*/
+.slicknav_nav > li:hover > a{background:#136cb7;}
+.slicknav_nav > li:hover > a > a{color:#fff;}
+.slicknav_nav > li:hover .slicknav_arrow {color:#fff;}
+.slicknav_nav > li:hover ul .slicknav_arrow{color:#000;}
+
+.slicknav_nav li ul li a:hover,
+.slicknav_nav li ul li a.slicknav_item:hover a{color:#136cb7;}
+
+#mobile_menu h1{display:none;}
+
+/************************************************************/
+/*responsive*/
+@media screen and (max-width:1024px) {
+    .nav{display:none;}
+	#menu {display:none;}
+	.slicknav_menu {display:block;}
+	.pn-ProductNav_Wrapper {display:block;}
+     
+	header{background:#ddd; height:70px; line-height:70px;}
+	.top_header{display:none}
+	#mobile_menu h1{display:block; line-height:70px; padding-left:20px;}
+	#mobile_menu h1 img{max-width:100%; width:127px;}
+}
